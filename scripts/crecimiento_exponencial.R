@@ -73,7 +73,7 @@ datos %>%
   scale_x_datetime(date_breaks = "1 hour", date_labels = "%H:%M") +
   labs(title = "Caudal en la Rambla del Poyo el 29 de octubre de 2024",
        subtitle = "Caudal registrado en intervalos de cinco minutos entre las 11:00 y las 18:55 representado en escala logarítmica.\nSe resaltan las dos áreas donde tuvo más impacto el crecimiento exponencial del caudal del rio.\nEntre las 16:00 y las 18:00 el caudal se multiplico por 28.", 
-       caption = "Datos proporcionados por Cuenca Hidrográfica del Jucar / Datadista",
+       caption = paste0("@pablohaya", strrep(" ", 240),"Datos proporcionados por Cuenca Hidrográfica del Jucar / Datadista"),
        x = "", 
        y = "") +
   theme_minimal() +
@@ -123,7 +123,7 @@ datos_filtrados %>%
   scale_y_continuous(labels = function(x) paste0("x", x)) +
   labs(title = "Incrementos de caudal en la Rambla del Poyo entre las 16:00 y las 18:45",
        subtitle = "Cada punto representa cuantas veces iba más deprisa el caudal tomando como referencia los últimos 30 minutos.\nPor ejemplo, a las 17:00 había aproximadamente el doble de caudal que a las 16:30.", 
-       caption = "Datos proporcionados por Cuenca Hidrográfica del Jucar / Datadista",
+       caption = paste0("@pablohaya", strrep(" ", 240),"Datos proporcionados por Cuenca Hidrográfica del Jucar / Datadista"),
        x = "", 
        y = "") +
   theme_minimal() +
