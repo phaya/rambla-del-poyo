@@ -114,7 +114,7 @@ datos_filtrados %>%
 datos_filtrados %>%
   filter(Fecha >= ymd_hms("2024-10-29 16:00:00")) %>% 
   ggplot(aes(x = Fecha, y = Diferencia_Caudal)) +
-  geom_line(color="gray") +
+  geom_line(color="darkblue") +
   geom_point(color = "darkblue",
              size = 2) +
   geom_text(aes(label = paste0("x", round(Diferencia_Caudal, 1))), 
