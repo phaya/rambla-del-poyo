@@ -3,7 +3,6 @@ library(tidyverse)
 library(lubridate)
 library(scales)
 
-
 # A partir de la gráfica publicada por la Cuenca Hidrográfica del Jucar (CHJ)
 # https://x.com/CHJucar/status/1853407411064730011
 # se realiza un análisis de cómo impacta el crecimiento exponencial partiendo
