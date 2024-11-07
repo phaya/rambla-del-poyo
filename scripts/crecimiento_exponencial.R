@@ -37,50 +37,144 @@ datos %>%
   ggplot(aes(x = Fecha, y = Caudal)) +
   geom_area(
     data = subset(datos, Fecha >= ymd_hms("2024-10-29 11:00:00") & 
-                         Fecha <= ymd_hms("2024-10-29 11:35:00")),
+                    Fecha <= ymd_hms("2024-10-29 11:35:00")),
     fill = "blue", alpha = 0.2
   ) +
   geom_area(
     data = subset(datos, Fecha >= ymd_hms("2024-10-29 11:35:00") & 
-                         Fecha <= ymd_hms("2024-10-29 16:00:00")),
+                    Fecha <= ymd_hms("2024-10-29 16:00:00")),
     fill = "gray", alpha = 0.3
   ) +
   geom_area(
     data = subset(datos, Fecha >= ymd_hms("2024-10-29 16:00:00") & 
-                         Fecha <= ymd_hms("2024-10-29 18:00:00")),
+                    Fecha <= ymd_hms("2024-10-29 18:00:00")),
     fill = "blue", alpha = 0.2
   ) +
   geom_area(
     data = subset(datos, Fecha >= ymd_hms("2024-10-29 18:00:00")),
     fill = "gray", alpha = 0.3
   ) +
+  #  # Añadimos una etiqueta explicativa caudal medio Ebro
   geom_hline(yintercept = caudal_medio_ebro, 
-             color = "darkgray", 
+             color = "blue",
+             alpha = 0.3,
+             size = 1,
              linetype = "dashed") +
-  geom_hline(yintercept = 1, 
-             color = "darkgray") +
-  # Añadimos una etiqueta explicativa para la línea horizontal
   annotate("text", x = min(datos$Fecha), y = caudal_medio_ebro, 
            label = "Caudal medio del río Ebro", 
-           vjust = -1, hjust = -1, 
-           color = "black", size = 3) +
-  annotate("text", x = ymd_hms("2024-10-29 17:00:00"), y = 10, 
-           label = "x28", 
            vjust = -1, hjust = 0, 
-           color = "black", size = 8) +
-  scale_y_continuous(trans = 'log10',
-                     labels = function(x) paste0(x,  " m³/s")) +
-  scale_x_datetime(date_breaks = "1 hour", date_labels = "%H:%M") +
-  labs(title = "Caudal en la Rambla del Poyo el 29 de octubre de 2024",
-       subtitle = "Caudal registrado en intervalos de cinco minutos entre las 11:00 y las 18:55 representado en escala logarítmica.\nSe resaltan las dos áreas donde tuvo más impacto el crecimiento exponencial del caudal del rio.\nEntre las 16:00 y las 18:00 el caudal se multiplico por 28.", 
-       caption = "@pablohaya | Datos proporcionados por Cuenca Hidrográfica del Jucar / Datadista",
-       x = "", 
-       y = "") +
-  theme_minimal() +
-  theme(panel.grid.minor = element_blank(),
-        panel.grid.major.x = element_blank(),
-        plot.title = element_text(face = "bold", size = 16),
-        plot.subtitle = element_text(size = 12))
+           color = "black", size = 3) +
+  geom_hline(yintercept = 1, 
+             color = "darkgray") +
+  # Añadimos los avisos
+  # Aviso 1 a las 12:07 sobre caudal de las 11.40
+  annotate("point", x = ymd_hms("2024-10-29 12:07:00"), y = 1, 
+           color = "darkgray", 
+           size = 3) + 
+  annotate("text", x = ymd_hms("2024-10-29 12:07:00"), y = 1, 
+           label = "Aviso a las 12:07\nsobre el caudal a las 11:40", 
+           vjust = -0.5, hjust = 0.75, 
+           color = "black", size = 3) +
+  annotate("point", x = ymd_hms("2024-10-29 11:40:00"), y = 1, 
+           color = "darkgray", 
+           size = 3) + 
+  annotate("segment", x = ymd_hms("2024-10-29 11:40:00"), y = 1,
+                   xend = ymd_hms("2024-10-29 12:07:00"), yend = 1,
+               color = "darkgray", size = 1) +
+  
+  # Aviso 2 13:42 sobre caudal de la 13.20
+  annotate("point", x = ymd_hms("2024-10-29 13:42:00"), y = 1, 
+           color = "darkgray", 
+           size = 3) + 
+  annotate("text", x = ymd_hms("2024-10-29 13:42:00"), y = 1, 
+           label = "13:42", 
+           vjust = -1, hjust = 0.5, 
+           color = "black", size = 3) +
+  annotate("point", x = ymd_hms("2024-10-29 13:20:00"), y = 1, 
+           color = "darkgray", 
+           size = 3) +
+  annotate("text", x = ymd_hms("2024-10-29 13:20:00"), y = 1, 
+           label = "13:20", 
+           vjust = -1, hjust = 0.5, 
+           color = "black", size = 3) +
+  annotate("segment", x = ymd_hms("2024-10-29 13:20:00"), y = 1,
+                      xend = ymd_hms("2024-10-29 13:42:00"), yend = 1,
+           color = "darkgray", size = 1) +
+  
+  # Aviso 3 a las 15:04 sobre caudal de las 14.35
+  annotate("point", x = ymd_hms("2024-10-29 15:04:00"), y = 1, 
+             color = "darkgray", 
+             size = 3) + 
+  annotate("text", x = ymd_hms("2024-10-29 15:04:00"), y = 1, 
+           label = "15:04", 
+           vjust = -1, hjust = 0.5, 
+           color = "black", size = 3) +
+  annotate("point", x = ymd_hms("2024-10-29 14:35:00"), y = 1, 
+             color = "darkgray", 
+             size = 3) + 
+  annotate("text", x = ymd_hms("2024-10-29 14:35:00"), y = 1, 
+           label = "14:35", 
+           vjust = -1, hjust = 0.5, 
+           color = "black", size = 3) +
+  annotate("segment", x = ymd_hms("2024-10-29 14:35:00"), y = 1,
+                   xend = ymd_hms("2024-10-29 15:04:00"), yend = 1,
+               color = "darkgray", size = 1) +
+  
+  # Aviso 4 a las 16:13 sobre caudal de las 15.50
+  annotate("point", x = ymd_hms("2024-10-29 16:13:00"), y = 1, 
+           color = "darkgray", 
+           size = 3) + 
+  annotate("text", x = ymd_hms("2024-10-29 16:13:00"), y = 1, 
+           label = "16:13", 
+           vjust = -1, hjust = 0.5, 
+           color = "black", size = 3) +
+  annotate("point", x = ymd_hms("2024-10-29 15:50:00"), y = 1, 
+           color = "darkgray", 
+           size = 3) + 
+  annotate("text", x = ymd_hms("2024-10-29 15:50:00"), y = 1, 
+           label = "15:50", 
+           vjust = -1, hjust = 0.5, 
+           color = "black", size = 3) +
+  annotate(geo_segment, x = ymd_hms("2024-10-29 15:50:00"), y = 1,
+                   xend = ymd_hms("2024-10-29 16:13:00"), yend = 1,
+               color = "darkgray", size = 1) +
+  
+  # Aviso 5 a las 18.43 sobre caudal a las 18:40
+  annotate("point", x = ymd_hms("2024-10-29 18:43:00"), y = 1, 
+           color = "darkgray", 
+           size = 3) + 
+  annotate("text", x = ymd_hms("2024-10-29 18:43:00"), y = 1, 
+           label = "18:43", 
+           vjust = -1, hjust = 0, 
+           color = "black", size = 3) +
+  annotate("point", x = ymd_hms("2024-10-29 18:40:00"), y = 1, 
+           color = "darkgray", 
+           size = 3) + 
+  annotate("text", x = ymd_hms("2024-10-29 18:40:00"), y = 1, 
+           label = "18:40", 
+           vjust = -1, hjust = 1, 
+           color = "black", size = 3) +
+  annotate("segment", x = ymd_hms("2024-10-29 18:40:00"), y = 1,
+                   xend = ymd_hms("2024-10-29 18:43:00"), yend = 1,
+               color = "darkgray", size = 1) +
+   # Texto x28
+ annotate("text", x = ymd_hms("2024-10-29 17:00:00"), y = 10, 
+          label = "x28", 
+          vjust = -1, hjust = 0, 
+          color = "black", size = 8) +
+ scale_y_continuous(trans = 'log10',
+                    labels = function(x) paste0(x,  " m³/s")) +
+ scale_x_datetime(date_breaks = "1 hour", date_labels = "%H:%M") +
+ labs(title = "Caudal en la Rambla del Poyo el 29 de octubre de 2024",
+      subtitle = "Caudal registrado en intervalos de cinco minutos entre las 11:00 y las 18:55 representado en escala logarítmica.\nSe resaltan las dos áreas donde tuvo más impacto el crecimiento exponencial del caudal del rio.\nEntre las 16:00 y las 18:00 el caudal se multiplico por 28.", 
+      caption = "@pablohaya | Datos proporcionados por Cuenca Hidrográfica del Jucar / Datadista",
+      x = "", 
+      y = "") +
+ theme_minimal() +
+ theme(panel.grid.minor = element_blank(),
+       panel.grid.major.x = element_blank(),
+       plot.title = element_text(face = "bold", size = 16),
+       plot.subtitle = element_text(size = 12))
 
 ggsave(here("outputs/caudal_escala_logaritmica.png"), 
        width = 25, height = 16, units = "cm", 
