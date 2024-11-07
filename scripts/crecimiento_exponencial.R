@@ -135,7 +135,7 @@ datos %>%
            label = "15:50", 
            vjust = -1, hjust = 0.5, 
            color = "black", size = 3) +
-  annotate(geo_segment, x = ymd_hms("2024-10-29 15:50:00"), y = 1,
+  annotate("segment", x = ymd_hms("2024-10-29 15:50:00"), y = 1,
                    xend = ymd_hms("2024-10-29 16:13:00"), yend = 1,
                color = "darkgray", size = 1) +
   
