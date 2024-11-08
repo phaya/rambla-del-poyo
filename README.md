@@ -6,7 +6,7 @@ En su libro _Factfulness_, el reconocido médico y experto en visualización de 
 
 Esta experiencia resalta el impacto de un sesgo cognitivo que lleva a interpretar los datos bajo un supuesto de crecimiento lineal, lo cual dificulta la identificación de fenómenos que evolucionan de forma acelerada. Reconocer este sesgo resulta fundamental para enfrentar eficazmente problemas donde el crecimiento no sigue una tendencia lineal, sino que se intensifica rápidamente.
 
-Ya [escribí](https://pablohaya.com/2020/03/27/por-que-es-tan-dificil-predecir-el-crecimiento-exponencial/) durante la pandemia como este "instinto lineal" nos llevó a subestimar el crecimiento de los contagios y lo complicado que es predecir en estos casos la evolución de un crecimiento exponencial. En la reciente catástrofe natural ocasionada por la DANA en la Comunidad Valenciana es probable que hayamos vuelto a pasar por alto el impacto de este crecimiento. 
+Ya [escribí](https://pablohaya.com/2020/03/27/por-que-es-tan-dificil-predecir-el-crecimiento-exponencial/) durante la pandemia como este «instinto lineal» nos llevó a subestimar el crecimiento de los contagios y lo complicado que es predecir en estos casos la evolución de un crecimiento exponencial. En la reciente catástrofe natural ocasionada por la DANA en la Comunidad Valenciana es probable que hayamos vuelto a pasar por alto el impacto de este crecimiento. 
 
 ## Caudal en la Rambla del Poyo
 
