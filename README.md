@@ -14,7 +14,7 @@ Las dos gráficas siguientes son el resultado de un análisis de cómo ha influi
 
 La primera gráfica muestra en escala logarítmica la evolución del caudal desde las 11:00 hasta las 18:55, que fue la última hora a la que se recibieron datos al arrasar el rio los instrumentos de medida. La escala logarítmica facilita el impacto del análisis del crecimiento exponencial del caudal, ya que el incremento del eje de las Y es exponencial, en vez de lineal. Cada marca se calcula multiplicando por $10$ la anterior. Así, la primera marca empieza en $1$ y la segunda salta a $10$, luego pasa $100$, finalmente a $1000$. 
 
-Esta gráfica hay que interpretarla fijándonos cuando el caudal pasa de un marca a otra, por ejemplo, cuando el caudal se encuentra entre $10\ m^3/s$ y $100\ m^3/s$, y pasa a estar entre $100\ m^3/s$ y $1000\ m^3/s$, ya que durante este proceso terminamos multiplicando por $10$ o más el caudal. 
+Esta gráfica hay que interpretarla fijándonos cuando el caudal pasa de un marca a otra. Por ejemplo, cuando el caudal se encuentra entre $10\ m^3/s$ y $100\ m^3/s$, y pasa a estar entre $100\ m^3/s$ y $1000\ m^3/s$, durante este proceso terminamos multiplicando por $10$ o más el caudal. 
 
 En la figura se resaltan dos momentos importantes. Al principio, cuando el caudal pasa por tres marcas, desde $1\ m^3/s$ hasta más de $100\ m^3/s$. Esta subida en tan poco tiempo fue enorme. Se multiplica el caudal por $100$ en $30$ minutos aproximadamente. La segunda es la franja entre las 16:00 y las 18:00 donde el caudal vuelve a crecer de manera exponencial ---el caudal sigue creciendo exponencialmente después de las 18:00 pero ya con muy poca capacidad de reacción---. Dentro de este intervalo, la Rambla del Poyo multiplicó por $28$ su caudal en dos horas ---paso de estar entre $10\ m^3/s$ y $100\ m^3/s$ a estar entre $100\ m^3/s$ y $1000\ m^3/s$---. 
 
@@ -36,7 +36,11 @@ Para el segundo ejemplo, imagina que tres naves parten hacia la Luna, a $384\,40
 
 ## ¿Por qué es necesaria la escala logarítmica?
 
-La escala logarítimica distorsiona la figura respecto a la gráfica que ha compartido Antonio Delgado en [la red social X](https://x.com/adelgado/status/1853840968736182772/photo/1) pero facilita el análisis del crecimiento exponencial. También publicó la CHJ una [gráfica](https://x.com/CHJucar/status/1853407411064730011) similar. De esta manera, podemos observar fenómenos que en las gráficas publicadas pueden pasar desapercibidos.
+La [escala logarítimica es muy útil](https://www.youtube.com/watch?v=W_BZb_va6jY) cuando queremos visualizar valores que son muy dispares. Comparemos la [imagen que compartió la CHJ](https://x.com/CHJucar/status/1853407411064730011), cuya escala es lineal, con la Figura 1. 
+   
+ ![Figura 3](https://pbs.twimg.com/media/GbipM4oW0AA0OF2?format=jpg&name=large)
+
+De esta manera, podemos observar fenómenos de crecimiento exponencial pueden pasar desapercibidos si representamos en escala lineal. De todas maneras, la gráfica de la Figura 3, o similares como la que compartió Antonio Delgado en [la red social X](https://x.com/adelgado/status/1853840968736182772/photo/1), que dicho sea de paso está mejor diseñada, siguen siendo necesarias. La diferencia es donde pone el foco cada una de las representaciones.
 
 ## Licencia
 
