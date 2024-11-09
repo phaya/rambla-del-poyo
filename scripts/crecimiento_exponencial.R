@@ -28,6 +28,12 @@ datos <-
 # https://es.wikipedia.org/wiki/Ebro
 caudal_medio_ebro <- 426
 
+# Umbrales avisos CHJ
+# https://maldita.es/clima/20241107/datos-rambla-poyo-dana-valencia/
+umbral_1 <- 30
+umbral_2 <- 70
+umbral_3 <- 150
+
 ################################################################################
 # Gráfica en escala logarítmica del caudal en la Rambla del Poyo. Se resaltan
 # las dos áreas donde tiene más impacto el crecimiento exponencial del caudal
@@ -62,6 +68,33 @@ datos %>%
              linetype = "dashed") +
   annotate("text", x = min(datos$Fecha), y = caudal_medio_ebro, 
            label = "Caudal medio del río Ebro", 
+           vjust = -1, hjust = 0, 
+           color = "black", size = 3.5) +
+  geom_hline(yintercept = umbral_1, 
+             color = "purple",
+             alpha = 0.3,
+             size = 0.5,
+             linetype = "dashed") +
+  annotate("text", x = ymd_hms("2024-10-29 11:40:00"), y = umbral_1, 
+           label = "Umbral escenario 1", 
+           vjust = -1, hjust = 0, 
+           color = "black", size = 3) +
+  geom_hline(yintercept = umbral_2, 
+             color = "orange",
+             alpha = 0.3,
+             size = 0.5,
+             linetype = "dashed") +
+  annotate("text", x = ymd_hms("2024-10-29 11:40:00"), y = umbral_2, 
+           label = "Umbral escenario 2", 
+           vjust = -1, hjust = 0, 
+           color = "black", size = 3) +
+  geom_hline(yintercept = umbral_3, 
+             color = "red",
+             alpha = 0.3,
+             size = 0.5,
+             linetype = "dashed") +
+  annotate("text", x = ymd_hms("2024-10-29 11:40:00"), y = umbral_3, 
+           label = "Umbral escenario 3", 
            vjust = -1, hjust = 0, 
            color = "black", size = 3) +
   geom_hline(yintercept = 1, 
