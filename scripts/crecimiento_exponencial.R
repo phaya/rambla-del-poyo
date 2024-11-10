@@ -69,7 +69,7 @@ datos %>%
   annotate("text", x = min(datos$Fecha), y = caudal_medio_ebro, 
            label = "Caudal medio del río Ebro", 
            vjust = -1, hjust = 0, 
-           color = "black", size = 3.5) +
+           color = "black", size = 4) +
   geom_hline(yintercept = umbral_1, 
              color = "purple",
              alpha = 0.3,
@@ -78,7 +78,7 @@ datos %>%
   annotate("text", x = ymd_hms("2024-10-29 11:40:00"), y = umbral_1, 
            label = "Umbral escenario 1", 
            vjust = -1, hjust = 0, 
-           color = "black", size = 3) +
+           color = "black", size = 3.5) +
   geom_hline(yintercept = umbral_2, 
              color = "orange",
              alpha = 0.3,
@@ -87,7 +87,7 @@ datos %>%
   annotate("text", x = ymd_hms("2024-10-29 11:40:00"), y = umbral_2, 
            label = "Umbral escenario 2", 
            vjust = -1, hjust = 0, 
-           color = "black", size = 3) +
+           color = "black", size = 3.5) +
   geom_hline(yintercept = umbral_3, 
              color = "red",
              alpha = 0.3,
@@ -96,7 +96,7 @@ datos %>%
   annotate("text", x = ymd_hms("2024-10-29 11:40:00"), y = umbral_3, 
            label = "Umbral escenario 3", 
            vjust = -1, hjust = 0, 
-           color = "black", size = 3) +
+           color = "black", size = 3.5) +
   geom_hline(yintercept = 1, 
              color = "darkgray") +
   # Añadimos los avisos
@@ -107,7 +107,7 @@ datos %>%
   annotate("text", x = ymd_hms("2024-10-29 12:07:00"), y = 1, 
            label = "Aviso a las 12:07\nsobre el caudal a las 11:40", 
            vjust = -0.5, hjust = 0.75, 
-           color = "black", size = 3) +
+           color = "black", size = 3.5) +
   annotate("point", x = ymd_hms("2024-10-29 11:40:00"), y = 1, 
            color = "darkgray", 
            size = 3) + 
@@ -122,14 +122,14 @@ datos %>%
   annotate("text", x = ymd_hms("2024-10-29 13:42:00"), y = 1, 
            label = "13:42", 
            vjust = -1, hjust = 0.5, 
-           color = "black", size = 3) +
+           color = "black", size = 3.5) +
   annotate("point", x = ymd_hms("2024-10-29 13:20:00"), y = 1, 
            color = "darkgray", 
            size = 3) +
   annotate("text", x = ymd_hms("2024-10-29 13:20:00"), y = 1, 
            label = "13:20", 
            vjust = -1, hjust = 0.5, 
-           color = "black", size = 3) +
+           color = "black", size = 3.5) +
   annotate("segment", x = ymd_hms("2024-10-29 13:20:00"), y = 1,
                       xend = ymd_hms("2024-10-29 13:42:00"), yend = 1,
            color = "darkgray", size = 1) +
@@ -141,14 +141,14 @@ datos %>%
   annotate("text", x = ymd_hms("2024-10-29 15:04:00"), y = 1, 
            label = "15:04", 
            vjust = -1, hjust = 0.5, 
-           color = "black", size = 3) +
+           color = "black", size = 3.5) +
   annotate("point", x = ymd_hms("2024-10-29 14:35:00"), y = 1, 
              color = "darkgray", 
              size = 3) + 
   annotate("text", x = ymd_hms("2024-10-29 14:35:00"), y = 1, 
            label = "14:35", 
            vjust = -1, hjust = 0.5, 
-           color = "black", size = 3) +
+           color = "black", size = 3.5) +
   annotate("segment", x = ymd_hms("2024-10-29 14:35:00"), y = 1,
                    xend = ymd_hms("2024-10-29 15:04:00"), yend = 1,
                color = "darkgray", size = 1) +
@@ -160,14 +160,14 @@ datos %>%
   annotate("text", x = ymd_hms("2024-10-29 16:13:00"), y = 1, 
            label = "16:13", 
            vjust = -1, hjust = 0.5, 
-           color = "black", size = 3) +
+           color = "black", size = 3.5) +
   annotate("point", x = ymd_hms("2024-10-29 15:50:00"), y = 1, 
            color = "darkgray", 
            size = 3) + 
   annotate("text", x = ymd_hms("2024-10-29 15:50:00"), y = 1, 
            label = "15:50", 
            vjust = -1, hjust = 0.5, 
-           color = "black", size = 3) +
+           color = "black", size = 3.5) +
   annotate("segment", x = ymd_hms("2024-10-29 15:50:00"), y = 1,
                    xend = ymd_hms("2024-10-29 16:13:00"), yend = 1,
                color = "darkgray", size = 1) +
@@ -179,14 +179,14 @@ datos %>%
   annotate("text", x = ymd_hms("2024-10-29 18:43:00"), y = 1, 
            label = "18:43", 
            vjust = -1, hjust = 0, 
-           color = "black", size = 3) +
+           color = "black", size = 3.5) +
   annotate("point", x = ymd_hms("2024-10-29 18:40:00"), y = 1, 
            color = "darkgray", 
            size = 3) + 
   annotate("text", x = ymd_hms("2024-10-29 18:40:00"), y = 1, 
            label = "18:40", 
            vjust = -1, hjust = 1, 
-           color = "black", size = 3) +
+           color = "black", size = 3.5) +
   annotate("segment", x = ymd_hms("2024-10-29 18:40:00"), y = 1,
                    xend = ymd_hms("2024-10-29 18:43:00"), yend = 1,
                color = "darkgray", size = 1) +
@@ -207,7 +207,8 @@ datos %>%
  theme(panel.grid.minor = element_blank(),
        panel.grid.major.x = element_blank(),
        plot.title = element_text(face = "bold", size = 16),
-       plot.subtitle = element_text(size = 12))
+       plot.subtitle = element_text(size = 12),
+       axis.text = element_text(size = 11))
 
 ggsave(here("outputs/caudal_escala_logaritmica.png"), 
        width = 25, height = 16, units = "cm", 
@@ -243,9 +244,9 @@ datos_filtrados %>%
   ggplot(aes(x = Fecha, y = Diferencia_Caudal)) +
   geom_line(color="darkblue") +
   geom_point(color = "darkblue",
-             size = 2) +
+             size = 3) +
   geom_text(aes(label = paste0("x", round(Diferencia_Caudal, 1))), 
-            vjust = -1, size = 3, color = "darkblue") +
+            vjust = -1, size = 4, color = "darkblue") +
   scale_x_datetime(date_breaks = "15 min", date_labels = "%H:%M") +
   scale_y_continuous(labels = function(x) paste0("x", x)) +
   labs(title = "Incrementos de caudal en la Rambla del Poyo entre las 16:00 y las 18:45",
@@ -257,7 +258,8 @@ datos_filtrados %>%
   theme(panel.grid.minor = element_blank(),
         panel.grid.major.x = element_blank(),
         plot.title = element_text(face = "bold", size = 16),
-        plot.subtitle = element_text(size = 12))
+        plot.subtitle = element_text(size = 12),
+        axis.text = element_text(size = 11))
 
 ggsave(here("outputs/incrementos_de_caudal.png"), 
        width = 25, height = 16, units = "cm", 
