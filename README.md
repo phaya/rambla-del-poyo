@@ -22,7 +22,7 @@ La siguiente figura complementa la anterior. Aquí cada punto representa el incr
 
 La [escala logarítimica es muy útil](https://www.youtube.com/watch?v=W_BZb_va6jY) cuando queremos visualizar valores que son muy dispares. Comparemos la [imagen que compartió la CHJ](https://x.com/CHJucar/status/1853407411064730011), cuya escala es lineal, con la Figura 1. 
    
- ![Figura 3](https://pbs.twimg.com/media/GbipM4oW0AA0OF2?format=jpg&name=large)
+![Figura 3](https://pbs.twimg.com/media/GbipM4oW0AA0OF2?format=jpg&name=large)
 
 Si nos fijamos en la Figura 3 en el intervalo entre las 16:00 y las 18:00, y lo comparamos con el tramo final, parece que en esas dos horas no hay un crecimiento importante, sino que es a partir de las 18:00 cuando se dispara el crecimiento. En cambio, si se emplea una escala logarítmica para el eje de las Y, como en la Figura 1, se observa más claramente que entre las 16:00 y las 18:00 hay un pronunciado crecimiento del caudal. Con la escala logarítimica podemos observar fenómenos de crecimiento exponencial pueden pasar desapercibidos si representamos en escala lineal. 
 
